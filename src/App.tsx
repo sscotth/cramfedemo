@@ -2,7 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+interface Props {
+  user?: any;
+}
+
+const App: React.FC<Props> = ({ user }: Props) => {
   return (
     <div className="App">
       <header className="App-header">
@@ -18,9 +22,11 @@ function App() {
         >
           Learn React
         </a>
+
+        {user ? <h1>Logged in as: {user.username}</h1> : <h1>Unknown User</h1>}
       </header>
     </div>
   );
-}
+};
 
 export default App;
