@@ -4,6 +4,7 @@ module.exports = {
   name: 'cramfedemo',
   exposes: {
     './App': './src/App.tsx',
+    './Counter': './src/Counter',
   },
   filename: 'remoteEntry.js',
   library: { type: 'umd', name: 'cramfedemo' },
